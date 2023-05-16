@@ -6,8 +6,6 @@
 
 ### Problem Domain
 
-
-
 ### Links and Resources
 
 - [GitHub Actions ci/cd](https://github.com/triciasawyer/server-deployment-practice/actions)
@@ -15,8 +13,6 @@
 - [back-end prod server url](https://server-deployment-practice-prod-9bjt.onrender.com)
 
 ### Collaborators
-
-401d53 and 401d10, Ryan in class
 
 ### Setup
 
