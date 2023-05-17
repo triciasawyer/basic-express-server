@@ -7,7 +7,7 @@ module.exports = (error, req, res, next) => {
 
     error: 500,
     route: req.path,
-    query: req.queury,
+    query: req.query,
     path: req.params,
     body: req.body,
     message: `Server Error: ${errorMessage}`,

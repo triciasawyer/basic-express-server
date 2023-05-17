@@ -6,25 +6,29 @@
 
 ### Problem Domain
 
+Creating
+
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/triciasawyer/server-deployment-practice/actions)
-- [back-end dev server url](https://server-deployment-practice-dev-mjez.onrender.com)
-- [back-end prod server url](https://server-deployment-practice-prod-9bjt.onrender.com)
+- [GitHub Actions ci/cd](https://github.com/triciasawyer/basic-express-server/actions)
+- [back-end dev server url](https://basic-express-server-dev-4sx4.onrender.com)
+- [back-end prod server url](https://basic-express-server-prod-jtnf.onrender.com)
 
 ### Collaborators
 
 ### Setup
 
-#### `.env` requirements (where applicable)
-
+.env requirements (where applicable)
 port variable exists within the env sample
 
-#### How to initialize/run your application (where applicable)
-
-clone repo, `npm i`, then run `nodemon` in the terminal
+How to initialize/run your application (where applicable)
+clone repo, npm i, then run nodemon in the terminal
 
 #### Routes
+
+GET : /success - specific route to hit
+GET : /bad - specific route
+GET : /person
 
 #### Tests
 
