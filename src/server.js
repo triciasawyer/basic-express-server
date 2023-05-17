@@ -26,25 +26,25 @@ app.get('/', (req, res, next) => {
 });
 
 
-// app.get('/person', (req, res, next) => {
-//   let {personsName} = req.query;
-
-//   try {
-//     if (personsName){
-//       res.status(200).send(`The name is ${personsName}`);
-//     } else {
-//       res.status(200).send(`Nice to meet you ${personsName}`);
-//     }
-//   } catch(error){
-//     next(error.message);
-//   }
-// });
-
-
 app.get('/person', validator, (req, res, next) => {
-  console.log('req.query', req.query);
-  res.status(200).send('Something happened');
+  let {personsName} = req.query;
+
+  try {
+    if (personsName){
+      res.status(200).send(`The name is ${personsName}`);
+    } else {
+      res.status(200).send(`Nice to meet you ${personsName}`);
+    }
+  } catch(error){
+    next(error.message);
+  }
 });
+
+
+// app.get('/person', validator, (req, res, next) => {
+//   console.log('req.query', req.query);
+//   res.status(200).send('Something happened');
+// });
 
 // This route should use the validator middleware to check the user’s input
 // If valid, send a JSON object through the response with the name value in it
