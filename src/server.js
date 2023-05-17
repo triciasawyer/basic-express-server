@@ -31,7 +31,7 @@ app.get('/person', validator, (req, res, next) => {
 
   try {
     if (personsName){
-      res.status(200).send(`The name is ${personsName}`);
+      res.status(200).send(`This persons name is ${personsName}`);
     } else {
       res.status(200).send(`Nice to meet you ${personsName}`);
     }
