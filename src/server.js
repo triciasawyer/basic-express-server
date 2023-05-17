@@ -2,7 +2,7 @@
 
 const express = require ('express');
 const cors = require('cors');
-const errorHandler = require(./);
+// const errorHandler = require(./);
 
 
 
@@ -27,4 +27,4 @@ app.get('/hiPath/:name', (req, res, next) => {
 });
 
 
-app.use(errorHandler);
+// app.use(errorHandler);
