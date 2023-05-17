@@ -13,31 +13,27 @@ describe('Server', () => {
     expect(response.text).toEqual('proof of life');
   });
 
-  test('handles success route', async () => {
-    const response = await mockRequest.get('/success');
 
+  test('handles person get requests', async () => {
+    const response = await mockRequest.get('/person?name=Tricia');
     expect(response.status).toEqual(200);
-    expect(response.text).toEqual('Success!!');
-
+    expect(response.test).toEqual('"Tricia"');
   });
 
-  test('handles bad requests', async () => {
-    const response = await mockRequest.get('/bad');
-    expect(response.status).toEqual(500);
-  });
 
   test('handles not found', async () => {
-    const response = await mockRequest.get('/foo');
+    let response = await mockRequest.get('/foo');
     expect(response.status).toEqual(404);
 
+    response = await mockRequest.post('/');
   });
 
 
   test('validate name parameter', async () => {
-    let response = await mockRequest.get('/person/something');
+    let response = await mockRequest.get('/person');
     expect(response.status).toEqual(500);
 
-    response = await mockRequest.get('/person/name');
+    response = await mockRequest.get('/person?name=something');
     expect(response.status).toEqual(200);
   });
 
