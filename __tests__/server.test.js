@@ -10,14 +10,14 @@ describe('Server', () => {
 
     expect(response.status).toBe(200);
     expect(response.text).toBeTruthy;
-    expect(response.text).toEqual('proof of life');
+    expect(response.text).toEqual('Proof of life');
   });
 
 
   test('handles person get requests', async () => {
     const response = await mockRequest.get('/person?name=Tricia');
     expect(response.status).toEqual(200);
-    expect(response.test).toEqual('"Tricia"');
+    expect(response.text).toEqual('"Tricia"');
   });
 
 
@@ -26,6 +26,7 @@ describe('Server', () => {
     expect(response.status).toEqual(404);
 
     response = await mockRequest.post('/');
+    expect(response.status).toEqual(404);
   });
 
 
