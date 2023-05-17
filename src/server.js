@@ -19,6 +19,8 @@ app.use(express.json());
 
 //add logger use
 app.use(logger);
+app.use(validator);
+
 
 
 app.get('/', (req, res, next) => {
@@ -26,19 +28,23 @@ app.get('/', (req, res, next) => {
 });
 
 
-app.get('/person', validator, (req, res, next) => {
-  let {personsName} = req.query;
+// app.get('/person', logger, (req, res, next) => {
 
-  try {
-    if (personsName){
-      res.status(200).send(`This persons name is ${personsName}`);
-    } else {
-      res.status(200).send(`Nice to meet you ${personsName}`);
-    }
-  } catch(error){
-    next(error.message);
+// });
+
+
+app.get('/person/:name', validator, (req, res, next) => {
+  const name = req.query.name;
+
+  if (!name) {
+    res.status(500).send('Internal Server Error');
+  } else {
+    const response = { 'name': 'Tricia' };
+    res.json(response);
   }
 });
+
+
 
 
 // app.get('/person', validator, (req, res, next) => {
@@ -46,9 +52,7 @@ app.get('/person', validator, (req, res, next) => {
 //   res.status(200).send('Something happened');
 // });
 
-// This route should use the validator middleware to check the user’s input
-// If valid, send a JSON object through the response with the name value in it
-// i.e. {"name": "fred" }
+
 
 app.get('/success', (req, res, next) => {
   res.status(200).send('Success!');
@@ -61,8 +65,6 @@ app.get('/bad', (req, res, next) => {
 
 app.use('*', notFound);
 app.use(errorHandler);
-
-
 
 
 const start = (port) => app.listen(port, () => console.log('listening on port:', port));

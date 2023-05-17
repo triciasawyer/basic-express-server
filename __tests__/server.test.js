@@ -32,4 +32,15 @@ describe('Server', () => {
 
   });
 
+
+  test('validate name parameter', async () => {
+    let response = await mockRequest.get('/person/something');
+    expect(response.status).toEqual(500);
+
+    response = await mockRequest.get('/person/name');
+    expect(response.status).toEqual(200);
+  });
+
+  
+
 });
