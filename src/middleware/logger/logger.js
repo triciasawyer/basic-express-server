@@ -1,7 +1,10 @@
 'use strict';
 
 const logger = (req, res, next) => {
-  console.log('logger middleware hit!');
+  console.log({
+    method: req.method,
+    path: req.path,
+  });
   next();
 };
 

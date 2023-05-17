@@ -16,6 +16,8 @@ Creating
 
 ### Collaborators
 
+Tim, and Ryan in review
+
 ### Setup
 
 .env requirements (where applicable)

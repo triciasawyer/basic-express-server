@@ -41,6 +41,4 @@ describe('Server', () => {
     expect(response.status).toEqual(200);
   });
 
-  
-
 });

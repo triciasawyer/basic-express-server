@@ -2,10 +2,10 @@
 
 
 module.exports = (req, res, next) => {
-  if (req.params.name === 'name') {
+  if (req.query.name) {
     next();
   } else {
-    next ('Path parameter must be name');
+    next ('Query parameter (or query string) must be name');
   }
 };
 
