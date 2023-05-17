@@ -2,6 +2,7 @@
 
 const express = require ('express');
 const cors = require('cors');
+const errorHandler = require(./);
 
 
 
@@ -24,3 +25,6 @@ app.get('/hiPath/:name', (req, res, next) => {
   console.log('params', req.query);
   res.status(200).send('Something happened');
 });
+
+
+app.use(errorHandler);
