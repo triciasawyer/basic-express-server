@@ -45,8 +45,6 @@ app.get('/person/:name', validator, (req, res, next) => {
 });
 
 
-
-
 // app.get('/person', validator, (req, res, next) => {
 //   console.log('req.query', req.query);
 //   res.status(200).send('Something happened');
