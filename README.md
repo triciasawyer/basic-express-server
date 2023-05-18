@@ -36,4 +36,8 @@ GET : /person
 
 to run tests, after running `npm i`, run the command `npm test`
 
+#### Deployed version
+
+[Render Deploy](https://basic-express-server-prod-jtnf.onrender.com)
+
 #### UML
