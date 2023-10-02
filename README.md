@@ -1,43 +1,26 @@
-# LAB- Class 2
+# Basic Express Server
 
-## Project: Basic express server
-
-### Author: Tricia Sawyer
-
-### Problem Domain
-
-Creating
+## Author: Tricia Sawyer
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/triciasawyer/basic-express-server/actions)
-- [back-end dev server url](https://basic-express-server-dev-4sx4.onrender.com)
-- [back-end prod server url](https://basic-express-server-prod-jtnf.onrender.com)
+- [GitHub Actions CI/CD](https://github.com/triciasawyer/basic-express-server/actions)
+- [Backend dev server](https://basic-express-server-dev-4sx4.onrender.com)
+- [Backend prod server](https://basic-express-server-prod-jtnf.onrender.com)
 
-### Collaborators
+### Initializing and Running the application
 
-Tim, and Ryan in review
+- Clone the repository down to your local machine.
+- Run `npm i`.
+- Run `npm test` to run the tests.
+- Run `nodemon` in the terminal.
 
-### Setup
-
-.env requirements (where applicable)
-port variable exists within the env sample
-
-How to initialize/run your application (where applicable)
-clone repo, npm i, then run nodemon in the terminal
-
-#### Routes
+### Routes
 
 GET : /success - specific route to hit
 GET : /bad - specific route
 GET : /person
 
-#### Tests
-
-to run tests, after running `npm i`, run the command `npm test`
-
-#### Deployed version
+### Deployment
 
 [Render Deploy](https://basic-express-server-prod-jtnf.onrender.com)
-
-#### UML
